@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+//helpers for reading and writing a file have to create a helpers folder and attach a uuid.js file (look at mini project)
+//const { readAndAppend, readFromFile } = require('.')
 // Helper method for generating unique ids (idk which one to use come back to this)
 const uuid = require('./helpers/uuid');
 const { v4: uuidv4 } = require('uuid');
