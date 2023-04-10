@@ -9,9 +9,9 @@
 
   ## Sources and Refrences
 
-   ![Starter Code](https://github.com/coding-boot-camp/miniature-eureka)
-   ![Express.js Info](https://expressjs.com/)
-   ![uuid info](https://www.npmjs.com/package/uuid?activeTab=readme)
+   [Starter Code](https://github.com/coding-boot-camp/miniature-eureka)
+   [Express.js Info](https://expressjs.com/)
+   [uuid info](https://www.npmjs.com/package/uuid?activeTab=readme)
 
   ## Table of Contents
 
