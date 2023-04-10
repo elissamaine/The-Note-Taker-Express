@@ -56,6 +56,7 @@ app.post('/api/notes', (req, res) => {
   } else {
     res.error('Error in adding a new note');
   }
+  //have to refresh to get the new note to appear, is there a way for it to automatiocally update with the new note
 });
 
 //delete request
