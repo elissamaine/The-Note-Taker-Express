@@ -8,5 +8,10 @@
         "title": "genres",
         "text": "fantasy, romance, horror, nonfiction",
         "id": "fee06741-c110-4e20-a335-b78dba485a28"
+    },
+    {
+        "title": "delete this note",
+        "text": "you can make this note disapear",
+        "id": "9021dc80-9990-40f8-a5d5-f0d2d7ef4c96"
     }
 ]

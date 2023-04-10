@@ -60,19 +60,20 @@ app.post('/api/notes', (req, res) => {
 
 //delete request
 app.delete('/api/notes/:id', (req, res) => {
+  //noteId constatnt is the id of the object that the user is trying to delete
   const noteId = req.params.id;
-  console.log(noteId)
 
   readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
     .then((json) => {
-
+      
+      //creates a new array without the object with noteId id
       const result = json.filter((note) => note.id != noteId);
-      console.log(result)
 
+      //pushed the new array of objects (without the deteted note to the)
       writeToFile('./db/db.json', result);
 
-      res.json(`item ${noteId} has been deleted 🗑️`)
+      res.json(`item ${noteId} has been deleted 🗑️`);
     })
 });
 

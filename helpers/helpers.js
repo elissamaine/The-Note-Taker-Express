@@ -1,3 +1,5 @@
+// these helper functions were from the activity 28 MiniProject
+
 const fs = require('fs');
 const util = require('util');
 
