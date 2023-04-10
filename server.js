@@ -36,17 +36,21 @@ app.get('/api/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '/db/db.json'))
 });
 
+//post request for the new note to be added to the db.json data
 app.post('/api/notes', (req, res) => {
   console.log(req.body);
 
+  //this creates a constant for the users imput on the submitted form
   const { title, text } = req.body;
 
+  //this creates a newNote constant that will take the inputs and add them to an object
   const newNote = {
     "title": title,
     "text": text,
     "id": uuidv4()
   };
 
+  // id there is user input then it pushed the newNote object into the db.json file
   if (req.body) {
     readAndAppend(newNote, './db/db.json');
   } else {
@@ -54,8 +58,22 @@ app.post('/api/notes', (req, res) => {
   }
 });
 
-//app.delete('/api/notes/:id', (req, res) => {
+//delete request
+app.delete('/api/notes/:id', (req, res) => {
+  const noteId = req.params.id;
+  console.log(noteId)
 
-//});
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+
+      const result = json.filter((note) => note.id != noteId);
+      console.log(result)
+
+      writeToFile('./db/db.json', result);
+
+      res.json(`item ${noteId} has been deleted 🗑️`)
+    })
+});
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`));
