@@ -1,12 +1,12 @@
 # The Note Taker Express
-  [Link to deployed site]()
+  [Link to deployed site](https://mighty-castle-40258.herokuapp.com/)
 
   ## Description
 
   This application is a simple note taker that was created using Express and deployed using Heroku. The application allows for the user to write, save, and delete notes. Express.js allows for the user to send and recieve data from the db.json file so that the notes are added to the actual site.
 
   ## Screenshot
-  ![Screenshot of deployed site]()
+  ![Screenshot of deployed site](./assets/Capture.PNG)
   ## Sources and Refrences
 
    [Starter Code](https://github.com/coding-boot-camp/miniature-eureka)
